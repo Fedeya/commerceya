@@ -1,5 +1,15 @@
 import Link from 'next/link';
-import { Nav, NavList, NavItem, NavBrand } from './styles';
+import {
+  Nav,
+  NavList,
+  NavItem,
+  NavBrand,
+  FavoriteIcon,
+  CartIcon,
+  IconContainer,
+  Quantity,
+  IconGroup
+} from './styles';
 import Search from '../search';
 
 const Navigation: React.FC = () => {
@@ -16,6 +26,16 @@ const Navigation: React.FC = () => {
         <NavItem>Contact</NavItem>
       </NavList>
       <Search />
+      <IconGroup>
+        <IconContainer>
+          <FavoriteIcon />
+          <Quantity>02</Quantity>
+        </IconContainer>
+        <IconContainer>
+          <CartIcon />
+          <Quantity>02</Quantity>
+        </IconContainer>
+      </IconGroup>
     </Nav>
   );
 };
