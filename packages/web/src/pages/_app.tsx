@@ -1,9 +1,15 @@
-import React from 'react';
 import { AppProps } from 'next/app';
-import 'antd/dist/antd.css';
+import Navigation from '../components/navigation';
+import Global from '../styles/global';
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Global />
+      <Navigation />
+      <Component {...pageProps} />;
+    </>
+  );
 };
 
 export default App;
