@@ -8,7 +8,9 @@ export const Nav = styled.nav`
   padding: 1rem;
   position: sticky;
   top: 0;
+  background-color: #fff;
   box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+  z-index: 100;
 `;
 
 export const NavBrand = styled.a`
@@ -32,12 +34,16 @@ export const NavList = styled.ul<{ opened: boolean }>`
   width: 90%;
   border-bottom: 1px solid #eee;
 
-  @media screen and (min-width: 1100px) {
+  @media screen and (min-width: 768px) {
     display: flex;
     position: static;
     flex-direction: row;
-    width: 30%;
+    width: 50%;
     border: none;
+  }
+
+  @media screen and (min-width: 1100px) {
+    width: 30%;
   }
 `;
 
@@ -47,7 +53,7 @@ export const NavItem = styled.li`
   display: flex;
   width: 100%;
 
-  @media screen and (min-width: 1100px) {
+  @media screen and (min-width: 768px) {
     margin: 0;
     width: max-content;
   }
@@ -60,7 +66,7 @@ export const NavLink = styled.a`
   transition: 200ms ease;
 
   &:hover {
-    color: var(--red);
+    color: #ff003c;
   }
 
   @media screen and (min-width: 1100px) {
@@ -121,14 +127,14 @@ export const Quantity = styled.p`
 `;
 
 export const Menu = styled(FaBars)`
-  color: red;
+  color: #ff003c;
   width: 2rem;
   height: 2rem;
   margin-left: 1.5rem;
   cursor: pointer;
   user-select: none;
 
-  @media screen and (min-width: 1100px) {
+  @media screen and (min-width: 768px) {
     display: none;
   }
 `;
