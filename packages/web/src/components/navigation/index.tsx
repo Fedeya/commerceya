@@ -18,33 +18,35 @@ import Search from '../search';
 const Navigation: React.FC = () => {
   const [opened, setOpened] = useState(false);
 
+  const close = () => setOpened(false);
+
   return (
     <Nav>
       <Link href="/" passHref>
         <NavBrand>Commerceya</NavBrand>
       </Link>
       <NavList opened={opened}>
-        <NavItem>
+        <NavItem onClick={close}>
           <Link href="/" passHref>
             <NavLink>Home</NavLink>
           </Link>
         </NavItem>
-        <NavItem>
+        <NavItem onClick={close}>
           <Link href="/products" passHref>
             <NavLink>Products</NavLink>
           </Link>
         </NavItem>
-        <NavItem>
+        <NavItem onClick={close}>
           <Link href="/brands" passHref>
             <NavLink>Brands</NavLink>
           </Link>
         </NavItem>
-        <NavItem>
+        <NavItem onClick={close}>
           <Link href="/about" passHref>
             <NavLink>About</NavLink>
           </Link>
         </NavItem>
-        <NavItem>
+        <NavItem onClick={close}>
           <Link href="/contact" passHref>
             <NavLink>Contact</NavLink>
           </Link>
