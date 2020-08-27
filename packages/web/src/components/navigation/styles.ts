@@ -5,10 +5,10 @@ export const Nav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  border: 1px solid #000;
   padding: 1rem;
   position: sticky;
   top: 0;
+  box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
 `;
 
 export const NavBrand = styled.a`
@@ -49,6 +49,7 @@ export const NavItem = styled.li`
 
   @media screen and (min-width: 1100px) {
     margin: 0;
+    width: max-content;
   }
 `;
 
@@ -60,6 +61,10 @@ export const NavLink = styled.a`
 
   &:hover {
     color: var(--red);
+  }
+
+  @media screen and (min-width: 1100px) {
+    width: max-content;
   }
 `;
 
