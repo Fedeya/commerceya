@@ -13,7 +13,7 @@ export const NavBrand = styled.a`
   text-decoration: none;
   font-size: 2rem;
   font-weight: bold;
-  color: black;
+  color: #6c6a6a;
   cursor: pointer;
 `;
 
@@ -22,6 +22,7 @@ export const NavList = styled.ul`
   display: flex;
   flex-direction: row;
   width: 30%;
+  padding: 1rem;
   justify-content: space-around;
   align-items: center;
 `;
