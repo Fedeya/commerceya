@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { AppProps } from 'next/app';
 import Router from 'next/router';
+import Head from 'next/head';
 
 import Navigation from '../components/navigation';
 import Global from '../styles/global';
@@ -25,6 +26,9 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
 
   return (
     <>
+      <Head>
+        <title>Commerceya</title>
+      </Head>
       <Global />
       <Navigation />
       {loading ? <p>Loading...</p> : <Component {...pageProps} />}
