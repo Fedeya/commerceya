@@ -7,7 +7,7 @@ export const Nav = styled.nav`
   justify-content: space-around;
   border: 1px solid #000;
   padding: 1rem;
-  position: relative;
+  position: sticky;
   top: 0;
 `;
 
@@ -44,6 +44,8 @@ export const NavList = styled.ul<{ opened: boolean }>`
 export const NavItem = styled.li`
   cursor: pointer;
   margin: 1rem;
+  display: flex;
+  width: 100%;
 
   @media screen and (min-width: 1100px) {
     margin: 0;
@@ -53,6 +55,7 @@ export const NavItem = styled.li`
 export const NavLink = styled.a`
   text-decoration: none;
   color: black;
+  width: 100%;
   transition: 200ms ease;
 
   &:hover {
@@ -62,6 +65,8 @@ export const NavLink = styled.a`
 
 export const IconGroup = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin-right: 0px;
 `;
 
@@ -114,6 +119,7 @@ export const Menu = styled(FaBars)`
   color: red;
   width: 2rem;
   height: 2rem;
+  margin-left: 1.5rem;
   cursor: pointer;
   user-select: none;
 

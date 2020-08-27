@@ -20,32 +20,32 @@ const Navigation: React.FC = () => {
 
   return (
     <Nav>
-      <Link href="/">
+      <Link href="/" passHref>
         <NavBrand>Commerceya</NavBrand>
       </Link>
       <NavList opened={opened}>
         <NavItem>
-          <Link href="/">
+          <Link href="/" passHref>
             <NavLink>Home</NavLink>
           </Link>
         </NavItem>
         <NavItem>
-          <Link href="/products">
+          <Link href="/products" passHref>
             <NavLink>Products</NavLink>
           </Link>
         </NavItem>
         <NavItem>
-          <Link href="/brands">
+          <Link href="/brands" passHref>
             <NavLink>Brands</NavLink>
           </Link>
         </NavItem>
         <NavItem>
-          <Link href="/about">
+          <Link href="/about" passHref>
             <NavLink>About</NavLink>
           </Link>
         </NavItem>
         <NavItem>
-          <Link href="/contact">
+          <Link href="/contact" passHref>
             <NavLink>Contact</NavLink>
           </Link>
         </NavItem>
@@ -60,8 +60,8 @@ const Navigation: React.FC = () => {
           <CartIcon />
           <Quantity>02</Quantity>
         </IconContainer>
+        <Menu onClick={() => setOpened(!opened)} />
       </IconGroup>
-      <Menu onClick={() => setOpened(!opened)} />
     </Nav>
   );
 };
