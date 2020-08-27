@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Link from 'next/link';
 import {
   Nav,
@@ -8,22 +9,46 @@ import {
   CartIcon,
   IconContainer,
   Quantity,
-  IconGroup
+  IconGroup,
+  Menu,
+  NavLink
 } from './styles';
 import Search from '../search';
 
 const Navigation: React.FC = () => {
+  const [opened, setOpened] = useState(false);
+
   return (
     <Nav>
       <Link href="/">
         <NavBrand>Commerceya</NavBrand>
       </Link>
-      <NavList>
-        <NavItem>Home</NavItem>
-        <NavItem>Products</NavItem>
-        <NavItem>Brands</NavItem>
-        <NavItem>About</NavItem>
-        <NavItem>Contact</NavItem>
+      <NavList opened={opened}>
+        <NavItem>
+          <Link href="/">
+            <NavLink>Home</NavLink>
+          </Link>
+        </NavItem>
+        <NavItem>
+          <Link href="/products">
+            <NavLink>Products</NavLink>
+          </Link>
+        </NavItem>
+        <NavItem>
+          <Link href="/brands">
+            <NavLink>Brands</NavLink>
+          </Link>
+        </NavItem>
+        <NavItem>
+          <Link href="/about">
+            <NavLink>About</NavLink>
+          </Link>
+        </NavItem>
+        <NavItem>
+          <Link href="/contact">
+            <NavLink>Contact</NavLink>
+          </Link>
+        </NavItem>
       </NavList>
       <Search />
       <IconGroup>
@@ -31,11 +56,12 @@ const Navigation: React.FC = () => {
           <FavoriteIcon />
           <Quantity>02</Quantity>
         </IconContainer>
-        <IconContainer>
+        <IconContainer visible>
           <CartIcon />
           <Quantity>02</Quantity>
         </IconContainer>
       </IconGroup>
+      <Menu onClick={() => setOpened(!opened)} />
     </Nav>
   );
 };

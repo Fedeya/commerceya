@@ -3,6 +3,11 @@ import { FaSearch } from 'react-icons/fa';
 
 export const SearchContainer = styled.div`
   position: relative;
+  display: none;
+
+  @media screen and (min-width: 1100px) {
+    display: flex;
+  }
 `;
 
 export const SearchField = styled.input`
