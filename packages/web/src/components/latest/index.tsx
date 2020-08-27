@@ -6,7 +6,7 @@ const Latest: React.FC = () => {
   return (
     <Container>
       {products.map(product => (
-        <Product product={product} />
+        <Product key={product.id} product={product} />
       ))}
     </Container>
   );
